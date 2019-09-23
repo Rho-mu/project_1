@@ -20,11 +20,6 @@ scoreText.x = 5;
 scoreText.y = 0;
 stage.addChild(scoreText);
 
-/*var levelText = new PIXI.Text('level: ' + level);
-levelText.x = 0;
-levelText.y = 20;
-stage.addChild(levelText);*/
-
 // Knight init
 knight.anchor.x = 0.5;
 knight.anchor.y = 0.5;
@@ -87,7 +82,7 @@ function arrowFlight(arrow)
        {
          score -= 10;
          scoreText.text = "score:" + score;
-
+         
          stage.removeChild(arrow);
          numOfArrows -= 1;
          return;
