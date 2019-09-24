@@ -11,6 +11,13 @@ gameport.appendChild(renderer.view);
 var stage = new PIXI.Container();
 var arrowTexture = PIXI.Texture.fromImage("Assets/Sprites/Arrow.png");
 var knight = new PIXI.Sprite(PIXI.Texture.fromImage("Assets/Sprites/Knight64.png"));
+var background = new PIXI.Sprite(PIXI.Texture.fromImage("Assets/background.png"));
+
+// background init
+background.anchor.set(0.5);
+background.x = WIDTH / 2;
+background.y = HEIGHT / 2;
+stage.addChild(background);
 
 // Score
 var level = 1;
