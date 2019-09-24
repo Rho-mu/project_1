@@ -14,7 +14,7 @@ var knight = new PIXI.Sprite(PIXI.Texture.fromImage("Assets/Sprites/Knight64.png
 
 // Score
 var level = 1;
-var score = 00;
+var score = 0;
 var scoreText = new PIXI.Text('score: ' + score);
 scoreText.x = 5;
 scoreText.y = 0;
@@ -82,7 +82,7 @@ function arrowFlight(arrow)
        {
          score -= 10;
          scoreText.text = "score:" + score;
-         
+
          stage.removeChild(arrow);
          numOfArrows -= 1;
          return;
