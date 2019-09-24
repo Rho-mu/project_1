@@ -42,7 +42,7 @@ var timer = setInterval(function spawnArrows()
 {
   if(numOfArrows <= 30)
   {
-    const arrow = new PIXI.Sprite(arrowTexture);
+    var arrow = new PIXI.Sprite(arrowTexture);
     arrow.anchor.set(0.5);
     arrow.x = WIDTH;
     arrow.y = Math.floor(Math.random() * HEIGHT);
@@ -55,7 +55,7 @@ var timer = setInterval(function spawnArrows()
       delay -= 10;
       level += 1;
       clearInterval(timer);
-      setInterval(spawnArrows, delay)
+      setInterval(spawnArrows, delay);
     }
   }
 }, delay);
